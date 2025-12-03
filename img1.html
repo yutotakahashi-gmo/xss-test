@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<style>
+#fake-alert {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 2px solid #333;
+  padding: 20px;
+  width: 360px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 9999;
+}
+#fake-alert button {
+  margin-top: 15px;
+  padding: 6px 16px;
+}
+</style>
+</head>
 <body>
 
-
-
-<img src="https://yutotakahashi-gmo.github.io/xss-test/tb12.jpg" width="400">
-
+<div id="fake-alert">
+  <h3>Alert</h3>
+  <img src="https://yutotakahashi-gmo.github.io/xss-test/tb12.jpg" width="200"><br><br>
+  <p>Tom Brady Injected by JavaScript</p>
+  <button onclick="document.getElementById('fake-alert').remove()">OK</button>
+</div>
 
 </body>
 </html>
