@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-<STYLE>body {background-image-src: url("javascript:alert(document.cookie)");}</STYLE>
 
 <h2>Image injected by JavaScript</h2>
 
 <div id="target"></div>
-<img src="java	script:window.alert(document.cookie)">
 
-<script src=https://www.activetk.jp/xss.js></SCRIPT>
-
+<script>
+document.getElementById("target").innerHTML =
+  '<img src="brady.jpg" width="400">';
+</script>
 
 </body>
 </html>
