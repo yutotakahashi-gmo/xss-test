@@ -7,8 +7,10 @@
 <div id="target"></div>
 
 <script>
+// URL を ASCII 文字だけで表現して GitHub に壊されないようにする
 const url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tom_Brady_%2850831667973%29.jpg/640px-Tom_Brady_%2850831667973%29.jpg";
 
+// URL を JavaScript の文字列として安全に扱うために encodeURI で保護
 document.getElementById("target").innerHTML =
   '<img src="' + encodeURI(url) + '" width="400">';
 </script>
